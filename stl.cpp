@@ -48,6 +48,47 @@ int main() {
         cout << *it << " ";
     }
     cout << endl;
+    
+    cout << "We are going to make the map, store the value, and print the value\n";
+    
+    map<int, int> m;   // by using map the key wil alway be stored in the sorted way 
+    m.insert({2, 4});
+    m.insert({1, 5});
+
+    for (auto value : m) {
+        cout << "Key: " << value.first << ", Value: " << value.second << endl;
+    }
+    
+     
+    cout << "We are going to make the unordered_map, store the value, and print the value\n";
+    
+    unordered_map<int,int>umap;
+    int key,value;
+      while (true) {
+        // Ask user for input
+        cout << "Enter a key (enter -1 to stop): ";
+        cin >> key;
+
+        // Condition to break the loop
+        if (key == -1) {
+            break;
+        }
+
+        cout << "Enter a value: ";
+        cin >> value;
+
+        // Insert the user input into the unordered_map
+        umap.insert({key, value});
+    }
+    for(auto value : umap){
+      cout<<"Key: "<<value.first<<" Value: "<<value.second<<endl;
+    }
+    
+    
+
+    
+    
+
 
     return 0;
 }
